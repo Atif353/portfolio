@@ -2,8 +2,14 @@ import { Menu, Moon, Sun, X } from "lucide-react";
 import { AnimatePresence, motion as Motion } from "framer-motion";
 import { useState } from "react";
 import { useTheme } from "../../context/ThemeContext";
+import { profile } from "../../data/portfolio";
 
-const links = ["About", "Work", "Experience", "Contact"];
+const links = [
+  ["Work", "#work"],
+  ["Stack", "#stack"],
+  ["Experience", "#experience"],
+  ["Contact", "#contact"],
+];
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -11,14 +17,16 @@ export function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 pointer-events-none">
-      <nav className="desktop-navigation panel pointer-events-auto mx-auto mt-4 hidden items-center justify-between rounded-2xl px-3 py-2 lg:flex">
+      <nav className="desktop-navigation nav-panel pointer-events-auto mx-auto mt-4 hidden items-center justify-between rounded-2xl px-3 py-2 lg:flex">
         <a href="#top" className="focus-ring flex items-center gap-3 rounded-xl px-1 py-1" aria-label="Home">
-          <span className="grid size-8 place-items-center rounded-lg bg-[var(--accent)] text-xs font-extrabold text-[#111]">AM</span>
-          <span className="text-xs font-semibold">Atif Mubashar</span>
+          <span className="brand-mark">{profile.initials}</span>
+          <span className="text-xs font-semibold">{profile.name}</span>
         </a>
 
         <div className="absolute left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-xl bg-[var(--bg-soft)] p-1">
-          {links.map((link) => <a key={link} className="focus-ring rounded-lg px-4 py-2 text-xs font-medium text-muted transition hover:bg-[var(--panel)] hover:text-[var(--text)]" href={`#${link.toLowerCase()}`}>{link}</a>)}
+          {links.map(([label, href]) => (
+            <a key={label} className="focus-ring rounded-lg px-4 py-2 text-xs font-medium text-muted transition hover:bg-[var(--panel)] hover:text-[var(--text)]" href={href}>{label}</a>
+          ))}
         </div>
 
         <div className="flex items-center gap-1.5">
@@ -40,18 +48,22 @@ export function Navbar() {
           <AnimatePresence>
             {open && (
               <Motion.nav
-                initial={{ opacity: 0, y: -8, scale: .97 }}
+                initial={{ opacity: 0, y: -8, scale: 0.97 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -8, scale: .97 }}
-                transition={{ duration: .18 }}
-                className="panel absolute right-0 mt-2 w-[min(15rem,calc(100vw-1.5rem))] rounded-2xl p-2"
+                exit={{ opacity: 0, y: -8, scale: 0.97 }}
+                transition={{ duration: 0.18 }}
+                className="panel absolute right-0 mt-2 w-[min(16rem,calc(100vw-1.5rem))] rounded-2xl p-2"
               >
                 <div className="mb-1 flex items-center gap-3 border-b hairline px-2 py-2.5">
-                  <span className="grid size-8 place-items-center rounded-lg bg-[var(--accent)] text-xs font-extrabold text-[#111]">AM</span>
-                  <div className="min-w-0"><p className="truncate text-xs font-semibold">Atif Mubashar</p><p className="mt-0.5 truncate text-[9px] text-muted">Full Stack Engineer</p></div>
+                  <span className="brand-mark">{profile.initials}</span>
+                  <div className="min-w-0"><p className="truncate text-xs font-semibold">{profile.name}</p><p className="mt-0.5 truncate text-[9px] text-muted">{profile.role}</p></div>
                 </div>
-                {links.map((link, index) => <a key={link} onClick={() => setOpen(false)} className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm transition hover:bg-[var(--line)]" href={`#${link.toLowerCase()}`}>{link}<span className="mono text-[8px] text-muted">0{index + 1}</span></a>)}
-                <a onClick={() => setOpen(false)} className="mt-1 block rounded-xl bg-[var(--text)] px-3 py-2.5 text-center text-xs font-bold text-[var(--bg)]" href="#contact">Let's talk</a>
+                {links.map(([label, href], index) => (
+                  <a key={label} onClick={() => setOpen(false)} className="flex items-center justify-between rounded-xl px-3 py-3 text-sm transition hover:bg-[var(--line)]" href={href}>
+                    {label}<span className="mono text-[8px] text-muted">0{index + 1}</span>
+                  </a>
+                ))}
+                <a onClick={() => setOpen(false)} className="mt-1 block rounded-xl bg-[var(--text)] px-3 py-3 text-center text-xs font-bold text-[var(--bg)]" href="#contact">Let's talk</a>
               </Motion.nav>
             )}
           </AnimatePresence>
