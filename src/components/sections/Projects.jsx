@@ -13,7 +13,7 @@ function ProjectPreview({ project }) {
         <span className="mono ml-auto text-[8px] text-muted">system / {project.number}</span>
       </div>
       <div className="grid gap-3 p-4">
-        <div className="grid grid-cols-[.8fr_1.2fr] gap-3">
+        <div className="case-preview-grid grid grid-cols-[.8fr_1.2fr] gap-3">
           <div className="rounded-xl border hairline bg-[var(--bg)]/60 p-3">
             <div className="mb-3 h-2 w-12 rounded-full bg-[var(--case-accent)]" />
             <div className="space-y-2">
@@ -84,7 +84,7 @@ export function Projects() {
                   ))}
                 </div>
 
-                <div className="grid gap-3 border-t hairline pt-5 sm:grid-cols-3">
+                <div className="grid gap-3 border-t hairline pt-5 md:grid-cols-3">
                   {project.impact.map((item) => <span key={item} className="rounded-xl bg-[var(--bg-soft)] px-3 py-3 text-xs font-semibold text-accent">{item}</span>)}
                 </div>
               </div>

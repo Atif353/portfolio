@@ -43,7 +43,7 @@ export function FullStack() {
           <CheckCircle2 size={16} className="text-accent" />
           My delivery checklist
         </div>
-        <div className="delivery-checklist relative mt-4 grid gap-0 overflow-hidden rounded-2xl border hairline md:grid-cols-4">
+        <div className="delivery-checklist relative mt-4 grid gap-0 overflow-hidden rounded-2xl border hairline lg:grid-cols-4">
           {process.map(([number, title, copy]) => (
             <div key={number} className="delivery-step text-xs">
               <span className="mono text-[9px] text-accent">{number}</span>

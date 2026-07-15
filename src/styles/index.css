@@ -260,6 +260,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   font-size: 3.75rem;
   font-weight: 800;
   line-height: 1.08;
+  text-wrap: balance;
 }
 .hero-content h1 span {
   color: var(--accent);
@@ -458,17 +459,27 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 @media (max-width: 639px) {
-  .section-wrap { width: min(100% - 1.25rem, 1120px); }
-  .section-space { padding-block: 4.75rem; }
-  .hero-reference { padding-top: 7.2rem; }
+  .section-wrap { width: min(100% - 2rem, 1120px); }
+  .section-space { padding-block: 4rem; }
+  .hero-reference { padding-top: 6.5rem; }
   .hero-top-strip,
   .hero-eyebrow,
   .hero-split,
-  .hero-practical-card { width: min(100% - 1.25rem, 1120px); }
+  .hero-practical-card { width: min(100% - 2rem, 1120px); }
+  .hero-top-strip { align-items: stretch; gap: .55rem; }
+  .hero-badge { width: 100%; min-width: 0; }
   .hero-split { grid-template-columns: 1fr; gap: 2rem; }
-  .hero-photo-card { position: static; max-width: 21rem; }
-  .hero-content h1 { max-width: 100%; font-size: 2.45rem; }
+  .hero-photo-card { position: static; order: 2; width: min(100%, 20rem); max-width: 100%; margin-inline: auto; }
+  .hero-content { order: 1; }
+  .hero-content h1 { max-width: 100%; font-size: clamp(2rem, 9vw, 2.35rem); }
+  .hero-lede { font-size: .96rem; line-height: 1.65; }
+  .hero-btn-solid,
+  .hero-btn-ghost { width: 100%; }
+  .hero-stack-row span { font-size: .64rem; }
+  .hero-practical-card { margin-top: 1.5rem; padding: 1rem; }
   .hero-practical-grid { grid-template-columns: 1fr; }
+  .hero-practical-item { min-height: auto; }
+  .case-preview-grid { grid-template-columns: 1fr; }
   .delivery-rail .layer-card,
   .delivery-checklist .delivery-step {
     border-right: 0;
@@ -501,9 +512,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-eyebrow,
   .hero-split,
   .hero-practical-card { width: min(100% - 2rem, 1120px); }
-  .hero-split { grid-template-columns: 1fr; }
-  .hero-photo-card { position: static; max-width: 22rem; }
-  .hero-content h1 { max-width: 13ch; font-size: 3rem; }
+  .hero-split { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-photo-card { position: static; order: 2; max-width: 24rem; margin-inline: auto; }
+  .hero-content { order: 1; }
+  .hero-content h1 { max-width: 16ch; font-size: 3rem; }
   .hero-practical-grid { grid-template-columns: repeat(2, 1fr); }
   .delivery-rail .layer-card,
   .delivery-checklist .delivery-step {
@@ -522,7 +534,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-split,
   .hero-practical-card { width: min(1120px, calc(100% - 2rem)); }
   .hero-split { grid-template-columns: .78fr 1.22fr; }
-  .hero-photo-card { position: sticky; max-width: none; }
+  .hero-photo-card { position: sticky; order: 0; max-width: none; margin-inline: 0; }
+  .hero-content { order: 0; }
   .hero-content h1 { max-width: 18ch; font-size: 3.75rem; }
   .hero-practical-grid { grid-template-columns: repeat(4, 1fr); }
   .delivery-rail .layer-card,

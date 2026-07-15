@@ -32,7 +32,7 @@ export function Contact() {
             <div className="grid-bg absolute inset-0 opacity-30" />
             <div className="relative">
               <p className="mono text-[10px] uppercase text-signal">Get in touch</p>
-              <h2 className="mt-6 text-3xl font-semibold leading-[1.05] sm:mt-8 sm:text-4xl md:text-6xl">Have a role or product problem in mind?</h2>
+              <h2 className="mt-6 text-3xl font-semibold leading-[1.05] sm:mt-8 sm:text-4xl lg:text-6xl">Have a role or product problem in mind?</h2>
               <p className="mt-5 max-w-md text-sm leading-7 text-muted sm:mt-6">I am open to full stack software engineering opportunities where I can contribute to useful products, reliable systems, and thoughtful user workflows.</p>
               <div className="mt-9 space-y-4 text-xs sm:mt-14">
                 <a className="flex min-w-0 items-center gap-3 transition hover:text-[var(--text)]" href={`mailto:${profile.email}`}><Mail size={15} className="shrink-0 text-accent" /><span className="min-w-0 break-all">{profile.email}</span></a>
