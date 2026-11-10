@@ -1,0 +1,45 @@
+.section {
+  padding-top: var(--page-top);
+  padding-bottom: clamp(32px, 4vw, 56px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 40px clamp(40px, 6vw, 96px);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.title {
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-top: 8px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink2);
+}
+
+.bio p {
+  text-wrap: pretty;
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: clamp(34px, 10vw, 44px);
+  }
+}

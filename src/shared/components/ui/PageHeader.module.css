@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 36px 24px;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.title {
+  font-size: clamp(44px, 6vw, 88px);
+  line-height: 1.06;
+  padding-bottom: 0.06em;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+.lead {
+  max-width: 560px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink2);
+  text-wrap: pretty;
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: clamp(38px, 11.5vw, 48px);
+  }
+}

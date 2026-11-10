@@ -1,0 +1,19 @@
+.marker {
+  flex: none;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.client {
+  background: var(--acc);
+}
+
+.personal {
+  background: var(--ink);
+}
+
+.academic {
+  border: 1px solid var(--ink2);
+}

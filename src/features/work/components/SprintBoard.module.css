@@ -1,0 +1,78 @@
+.board {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+  gap: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--card) 70%, transparent);
+  border: 1px solid var(--line);
+}
+
+.columnHead {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 2px 4px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink3);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 9px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  transition:
+    border-color 0.5s,
+    box-shadow 0.5s;
+}
+
+.active {
+  border-color: var(--acc);
+  box-shadow: 0 6px 20px -8px var(--acc);
+}
+
+.cardTitle {
+  font-size: 13px;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink3);
+}
+
+.status {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.idle {
+  background: var(--line2);
+}
+
+.review {
+  background: var(--acc);
+}
+
+.done {
+  background: var(--green);
+}

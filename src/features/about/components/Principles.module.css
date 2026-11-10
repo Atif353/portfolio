@@ -1,0 +1,44 @@
+.section {
+  padding-bottom: clamp(56px, 7vw, 96px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+  border-radius: 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.number {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--acc);
+}
+
+.title {
+  font-size: 22px;
+  letter-spacing: -0.025em;
+  font-weight: 500;
+}
+
+.body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink2);
+  text-wrap: pretty;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 24px 22px;
+  }
+}

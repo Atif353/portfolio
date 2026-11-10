@@ -1,0 +1,25 @@
+.dot {
+  flex: none;
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--green);
+  animation: pulse 2.2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 oklch(0.68 0.17 145 / 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 8px oklch(0.68 0.17 145 / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.68 0.17 145 / 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    animation: none;
+  }
+}

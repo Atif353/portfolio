@@ -1,0 +1,10 @@
+.accent {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--acc);
+}
+
+.tight {
+  letter-spacing: -0.03em;
+}

@@ -1,0 +1,65 @@
+.card {
+  position: sticky;
+  top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+  border-radius: 22px;
+  background: var(--ink);
+  color: var(--bg);
+  transition: background 0.45s ease, color 0.45s ease;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 12px;
+  font-family: var(--mono);
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.company {
+  font-size: 34px;
+  letter-spacing: -0.035em;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.role {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 26px;
+  color: var(--acc);
+}
+
+.summary {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.82;
+  text-wrap: pretty;
+}
+
+@media (max-width: 899px) {
+  .card {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 26px 22px;
+  }
+
+  .company {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,11 @@
+.page {
+  padding-top: var(--page-top);
+  padding-bottom: var(--section-y);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  align-items: start;
+  gap: clamp(32px, 4vw, 64px);
+}

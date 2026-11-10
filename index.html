@@ -2,18 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#080a0d" />
-    <meta name="description" content="Atif Mubashar is a full stack software engineer building reliable APIs, dashboards, real-time workflows, payments, and production integrations." />
-    <meta property="og:title" content="Atif Mubashar - Full Stack Software Engineer" />
-    <meta property="og:description" content="Reliable APIs, dashboards, real-time workflows, payments, and production integrations." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atif Mubashar — Full Stack Software Engineer</title>
+    <meta name="description" content="Atif Mubashar is a full stack software engineer specialising in backend systems, APIs and LLM applications." />
+    <meta property="og:title" content="Atif Mubashar — Full Stack Software Engineer" />
+    <meta property="og:description" content="Backends that hold up. Interfaces that make sense. AI that knows its limits." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/og-card.svg" />
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-    <title>Atif Mubashar - Full Stack Software Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <script>
+      (function () {
+        var theme;
+        try {
+          theme = localStorage.getItem("am-portfolio-theme");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -46,3 +46,6 @@ Desktop.ini
 *.tmp
 *.temp
 ~$*
+
+# Design reference
+design_handoff_portfolio/

@@ -1,0 +1,59 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: var(--btn-h);
+  padding: 0 var(--btn-x);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    transform 0.25s var(--ease),
+    opacity 0.2s,
+    border-color 0.25s,
+    background 0.25s;
+}
+
+.accent {
+  background: var(--acc);
+  color: var(--onAcc);
+}
+
+.ink {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.light {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.outline {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line2);
+}
+
+.accent:hover,
+.ink:hover,
+.light:hover {
+  transform: translateY(-2px);
+}
+
+.outline:hover {
+  border-color: var(--ink);
+  background: var(--card);
+}
+
+@media (max-width: 480px) {
+  .button {
+    font-size: 14px;
+  }
+}

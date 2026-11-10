@@ -1,0 +1,40 @@
+:root {
+  --bg: #f3f1ec;
+  --bg2: #ebe8e1;
+  --card: #faf9f6;
+  --ink: #141517;
+  --ink2: #46484c;
+  --ink3: #686a6e;
+  --line: rgba(20, 21, 23, 0.11);
+  --line2: rgba(20, 21, 23, 0.2);
+  --acc: oklch(0.55 0.17 40);
+  --onAcc: #ffffff;
+  --green: oklch(0.68 0.17 145);
+
+  --sans: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --serif: "Instrument Serif", Georgia, serif;
+
+  --container: 1440px;
+  --gutter: clamp(20px, 4vw, 72px);
+  --section-y: clamp(72px, 9vw, 128px);
+  --page-top: clamp(56px, 7vw, 104px);
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0e0f11;
+  --bg2: #15171a;
+  --card: #16181b;
+  --ink: #eceae5;
+  --ink2: #b3b4b6;
+  --ink3: #8c8e92;
+  --line: rgba(255, 255, 255, 0.08);
+  --line2: rgba(255, 255, 255, 0.18);
+  --acc: oklch(0.74 0.15 45);
+  --onAcc: #141517;
+
+  color-scheme: dark;
+}
