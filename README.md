@@ -1,5 +1,15 @@
 # Atif Mubashar — Portfolio
 
+**Backend systems, full stack products, and applied AI.**
+
+**Stack:** React · Vite · CSS Modules · Vercel
+
+[Portfolio presentation](https://atifmubashar.vercel.app/work) · [Author](https://atifmubashar.vercel.app/) · [Contact](mailto:atifmubashar353@gmail.com)
+
+**[Visit the live portfolio →](https://atifmubashar.vercel.app/)**
+
+[LinkedIn](https://www.linkedin.com/in/atifmubashar-dev/) · [Email](mailto:atifmubashar353@gmail.com)
+
 Personal portfolio of Atif Mubashar, a full stack software engineer focused on backend systems and LLM applications.
 
 Built with React 19, React Router 7 and Vite. Styling is plain CSS Modules on top of a small set of design tokens, with light and dark themes.
